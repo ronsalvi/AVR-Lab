@@ -1,0 +1,21 @@
+============================================================================================================================
+Assignment 1: Assembly
+============================================================================================================================
+1) Study well the Instruction Set of AVR, Assembler directives of AVR, ATMEGA64/128 data sheet
+2) Write instructions to load two numbers in registers. Add the numbers
+3) Write a code to find the maximum number among two numbers stored in registers
+4) Add, Subtract two HEX numbers check the changes in SREG register. (Also try with carry)
+5) Add a block of 10 Data bytes and store the result in the memory
+
+============================================================================================================================
+Assignment 2: Assembly
+============================================================================================================================
+1a) Multiply two 8-bit data using the MUL instruction
+1b) Multiply two 8-bit data without using the MUL instruction
+1c) Multiply two 16-bit data
+2a) Divide two 8-bit data using the DIV instruction
+2b) Divide two 8-bit data without using the DIV instruction
+2c) Divide two 16-bit data
+3) Perform 16-bit addition
+4) Sort 10 numbers in ascending and descending order and store them separately without changing the original array.
+5) Write a delay subroutine to give an exact delay of 2sec(Test by outputting 0x55 and 0xaa alternately on the LED's)
