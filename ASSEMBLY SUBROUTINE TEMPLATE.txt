@@ -1,0 +1,30 @@
+
+; Always disable interrupts and initialize the stack pointer at the beginning of your program.
+
+; Disable interrupts and configure stack pointer.
+ cli
+ ldi r16,low(RAMEND) // RAMEND address
+ out SPL,r16 // Stack Pointer Low SPL
+ ldi r16,high(RAMEND)
+ out SPH,r16 // Stack Pointer High SPH
+
+  
+; ---- My Subroutine -------
+; Called from Somewhere
+; Input: Registers, SRAM variables, or I/O registers
+; Outputs: None for a subroutine or r25:r24 register pair for a C/C++ function call.
+; No others registers or flags are modified by this subroutine
+; --------------------------
+MySubroutine:
+	push r15 ; Push any flags or registers modified by the procedure
+	in r15,SREG	; Back up SREG contents into r15 register 
+	push r16
+
+; my assembly code
+
+endMySubroutine:
+	clr r25 ; Zero-extended to 16-bits for C/C++ call (optional)
+	pop r16 ; Pop any flags or registers placed on the stack
+	out SREG,r15	; Restore SREG contents from r15 register 
+	pop r15
+	ret
