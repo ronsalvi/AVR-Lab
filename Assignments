@@ -1,6 +1,7 @@
 ============================================================================================================================
 Assignment 1: Assembly
 ============================================================================================================================
+
 1) Study well the Instruction Set of AVR, Assembler directives of AVR, ATMEGA64/128 data sheet
 2) Write instructions to load two numbers in registers. Add the numbers
 3) Write a code to find the maximum number among two numbers stored in registers
@@ -10,6 +11,7 @@ Assignment 1: Assembly
 ============================================================================================================================
 Assignment 2: Assembly
 ============================================================================================================================
+
 1a) Multiply two 8-bit data using the MUL instruction
 1b) Multiply two 8-bit data without using the MUL instruction
 1c) Multiply two 16-bit data
@@ -19,3 +21,31 @@ Assignment 2: Assembly
 3) Perform 16-bit addition
 4) Sort 10 numbers in ascending and descending order and store them separately without changing the original array.
 5) Write a delay subroutine to give an exact delay of 2sec(Test by outputting 0x55 and 0xaa alternately on the LED's)
+
+============================================================================================================================
+Assignment 3: C Programming
+============================================================================================================================
+
+Hello guys,
+A little word of advice to all of you. Before proceeding to this assignment you must all be comfortable with the C programming and AVR peripheral programming including IO ports, timer, UART, ADC, LCD and SPI. Questions which are mentioned below are of the same type that would be coming in your lab exam. Prepare well and yes any copy case will not be tolerated. If found guilty he/she would have to give re-exam which would be ever harder than the normal exam. So think twice before copying. At least make sure that your code does not contain any errors. Comments are must in the program also mention the logic used in the program.
+Question 8 and 9 are bonus questions. If you solve them very well then you would get out of marks in your internals.
+
+1. Write a C Program in which we use 8 LED’s and 4 Switches in such a way that when we press SW1 LED1 and LED2 should glow for a 1sec and then should be off. Similarly if we press SW2, LED3 and LED4 should glow, if SW3 then LED5 and LED6 and if SW4 then LED7 and LED8. Use Timer1 to generate the delay. (You may use timer1 in over flow mode or CTC mode).
+2. Write a code which will receive one number (0 - 9) from the UART and transmit character ‘Y’ if the number entered is prime and the character ‘N’ if it is not. After successful completion of this program generalize this for at least 3 digit number (0-999).
+3. Make Header files
+a. ioport.h containing the functions or methods related to LED’s, Switches and Buzzer.
+b. timer.h containing the delay functions or methods of delay_us, delay_ms and delay_sec.
+c. uart.h containing the functions or methods of uart initialization, transmission and reception.
+d. lcd.h containing the function of LCD initialization, sending command and data, goto function, string printing, floating value printing etc.
+e. spi.h for master and slave containing the function of initialization of spi, transmission and reception of data.
+4. Write a C program in which we use Stopwatch Application using timer with interrupt mode, two switches to start and stop the application and LCD or UART for displaying purpose of the stopwatch.
+5. Write a C program to set a Digital Clock application with Alarm facility without using on board RTC. To actually set an alarm take the input from the user through UART. Use switch to stop the buzzer (alarm).
+6. Write a program to build an application of Automatic lights controller based on LDR and LED’s. Whenever there is sufficient light the light (LED’s) wouldn’t glow and when there is no light, all LED’s should glow. Depending on the intensity of the light incident on LDR, likewise the pattern of LED’s should glow. More intensity of ligiht less LED’s should glow and vice versa. Display the values of ADC on LCD.
+7. Write a code for chatting application using UART and SPI. Make sure that you have to boards and two PC’s. Boards connected to each other by SPI. One board i.e. Master would be connected to PC via UART and same would be the case with Slave device. Master would write some data or character in Tera-Term that would be sent to board via UART and then via SPI to slave board and finally on the 2nd PC through UART.
+8. Using joystick and UART try the make the cursor application. Whenever the position of the joystick is in similar fashion the cursor should move.
+9. Generate the Happy birthday tone using buzzer and timer.
+Best of luck for solving them. In case of any Hardware related difficulty we will surely help. But in case of logic design or errors in the program related to C language we won’t it should be developed on your own. If you solve the above questions I guarantee that it would be very easy for you all to give the lab exam.
+So do well!!
+
+Regards,
+Rohan
