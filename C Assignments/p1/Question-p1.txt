@@ -1,0 +1,5 @@
+P1:-
+
+Write a C Program in which we use 8 LED’s and 4 Switches in such a way that when we press SW1 LED1 and LED2 should glow for a 1sec and then should be off.
+Similarly if we press SW2, LED3 and LED4 should glow, if SW3 then LED5 and LED6 and if SW4 then LED7 and LED8. Use Timer1 to generate the delay.
+(You may use timer1 in over flow mode or CTC mode).
